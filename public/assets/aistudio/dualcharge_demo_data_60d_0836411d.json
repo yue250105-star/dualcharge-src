@@ -1,0 +1,1459 @@
+{
+  "project": "DualCharge",
+  "dataset_version": "1.0",
+  "dataset_type": "synthetic_demo_data",
+  "date_range": {
+    "start": "2026-09-15",
+    "end": "2026-11-13",
+    "days": 60
+  },
+  "disclaimer": "All records are fictional and generated solely for a product demo. They are not real health records, diagnoses, or validated predictions.",
+  "energy_index_formula": {
+    "sleep_duration_score": "min(sleep_hours / 8 * 100, 100)",
+    "sleep_quality_score": "(sleep_quality_1_to_5 - 1) / 4 * 100",
+    "self_report_score": "(self_reported_energy_1_to_5 - 1) / 4 * 100",
+    "final": "0.30 * sleep_duration_score + 0.20 * sleep_quality_score + 0.50 * self_report_score",
+    "interpretation": "An illustrative app energy indicator combining sleep context with self-reported energy; not a medical or emotional-state score."
+  },
+  "partners": {
+    "partner_a": {
+      "display_name": "Alex",
+      "role": "Partner A",
+      "care_preferences": {
+        "preferred_care": [
+          "a short supportive message",
+          "a relaxed evening walk"
+        ],
+        "food_preferences": [
+          "fruit tea"
+        ],
+        "avoid": [
+          "surprise visits"
+        ],
+        "communication_style": "short and warm messages"
+      },
+      "shared_fields": [
+        "energy_summary",
+        "sleep_summary",
+        "activity_summary"
+      ],
+      "pattern_note": "Relatively stable weekday energy with slightly better weekend recovery."
+    },
+    "partner_b": {
+      "display_name": "Jamie",
+      "role": "Partner B",
+      "care_preferences": {
+        "preferred_care": [
+          "quiet time",
+          "a light dinner",
+          "a gentle check-in"
+        ],
+        "food_preferences": [
+          "warm milk tea",
+          "light meals"
+        ],
+        "avoid": [
+          "crowded activities after a busy day"
+        ],
+        "communication_style": "gentle, non-demanding messages"
+      },
+      "shared_fields": [
+        "energy_summary",
+        "sleep_summary"
+      ],
+      "pattern_note": "Repeated midweek sleep reduction followed by lower Thursday self-reported energy."
+    }
+  },
+  "records": [
+    {
+      "date": "2026-09-15",
+      "weekday": "Tuesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 6.9,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 36,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 96,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-15",
+      "weekday": "Tuesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.9,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 36,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 78,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-16",
+      "weekday": "Wednesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.0,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 42,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 79,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-16",
+      "weekday": "Wednesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 5.5,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 55,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 56,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-17",
+      "weekday": "Thursday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.2,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 40,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 80,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-17",
+      "weekday": "Thursday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.1,
+      "sleep_quality_1_to_5": 2,
+      "activity_minutes": 48,
+      "self_reported_energy_1_to_5": 2,
+      "estimated_energy_index_0_to_100": 40,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-18",
+      "weekday": "Friday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.1,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 49,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 84,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-18",
+      "weekday": "Friday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.6,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 48,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 60,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-19",
+      "weekday": "Saturday",
+      "partner_id": "partner_a",
+      "sleep_hours": 8.1,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 61,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 95,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-19",
+      "weekday": "Saturday",
+      "partner_id": "partner_b",
+      "sleep_hours": 7.9,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 58,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 87,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-20",
+      "weekday": "Sunday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.7,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 31,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 94,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-20",
+      "weekday": "Sunday",
+      "partner_id": "partner_b",
+      "sleep_hours": 7.9,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 28,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 95,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-21",
+      "weekday": "Monday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.2,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 37,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 84,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-21",
+      "weekday": "Monday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.8,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 34,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 78,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-22",
+      "weekday": "Tuesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.3,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 44,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 80,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-22",
+      "weekday": "Tuesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.8,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 44,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 60,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-23",
+      "weekday": "Wednesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 6.9,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 50,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 91,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-23",
+      "weekday": "Wednesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 5.9,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 63,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 57,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-24",
+      "weekday": "Thursday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.1,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 35,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 84,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-24",
+      "weekday": "Thursday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.0,
+      "sleep_quality_1_to_5": 2,
+      "activity_minutes": 43,
+      "self_reported_energy_1_to_5": 2,
+      "estimated_energy_index_0_to_100": 40,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-25",
+      "weekday": "Friday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.0,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 44,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 79,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-25",
+      "weekday": "Friday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.5,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 43,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 72,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-26",
+      "weekday": "Saturday",
+      "partner_id": "partner_a",
+      "sleep_hours": 8.0,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 56,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 95,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-26",
+      "weekday": "Saturday",
+      "partner_id": "partner_b",
+      "sleep_hours": 7.8,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 53,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 82,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-27",
+      "weekday": "Sunday",
+      "partner_id": "partner_a",
+      "sleep_hours": 8.1,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 39,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 100,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-27",
+      "weekday": "Sunday",
+      "partner_id": "partner_b",
+      "sleep_hours": 7.8,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 36,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 87,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-28",
+      "weekday": "Monday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.1,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 32,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 79,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-28",
+      "weekday": "Monday",
+      "partner_id": "partner_b",
+      "sleep_hours": 7.2,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 29,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 80,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-29",
+      "weekday": "Tuesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.2,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 39,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 80,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-29",
+      "weekday": "Tuesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.7,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 39,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 60,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-30",
+      "weekday": "Wednesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 6.8,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 45,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 83,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-09-30",
+      "weekday": "Wednesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 5.8,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 58,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 57,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-01",
+      "weekday": "Thursday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.0,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 43,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 91,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-01",
+      "weekday": "Thursday",
+      "partner_id": "partner_b",
+      "sleep_hours": 5.9,
+      "sleep_quality_1_to_5": 2,
+      "activity_minutes": 51,
+      "self_reported_energy_1_to_5": 2,
+      "estimated_energy_index_0_to_100": 40,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-02",
+      "weekday": "Friday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.4,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 52,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 80,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-02",
+      "weekday": "Friday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.4,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 51,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 59,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-03",
+      "weekday": "Saturday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.9,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 51,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 100,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-03",
+      "weekday": "Saturday",
+      "partner_id": "partner_b",
+      "sleep_hours": 8.2,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 48,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 82,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-04",
+      "weekday": "Sunday",
+      "partner_id": "partner_a",
+      "sleep_hours": 8.0,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 34,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 95,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-04",
+      "weekday": "Sunday",
+      "partner_id": "partner_b",
+      "sleep_hours": 7.7,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 31,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 81,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-05",
+      "weekday": "Monday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.0,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 40,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 91,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-05",
+      "weekday": "Monday",
+      "partner_id": "partner_b",
+      "sleep_hours": 7.1,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 37,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 97,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-06",
+      "weekday": "Tuesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.1,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 47,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 84,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-06",
+      "weekday": "Tuesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.6,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 47,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 60,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-07",
+      "weekday": "Wednesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.2,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 40,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 80,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-07",
+      "weekday": "Wednesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 5.7,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 53,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 56,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-08",
+      "weekday": "Thursday",
+      "partner_id": "partner_a",
+      "sleep_hours": 6.9,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 38,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 78,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-08",
+      "weekday": "Thursday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.3,
+      "sleep_quality_1_to_5": 2,
+      "activity_minutes": 46,
+      "self_reported_energy_1_to_5": 2,
+      "estimated_energy_index_0_to_100": 41,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-09",
+      "weekday": "Friday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.3,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 47,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 97,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-09",
+      "weekday": "Friday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.3,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 46,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 64,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-10",
+      "weekday": "Saturday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.8,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 59,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 94,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-10",
+      "weekday": "Saturday",
+      "partner_id": "partner_b",
+      "sleep_hours": 8.1,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 56,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 95,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-11",
+      "weekday": "Sunday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.9,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 29,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 95,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-11",
+      "weekday": "Sunday",
+      "partner_id": "partner_b",
+      "sleep_hours": 7.6,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 26,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 81,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-12",
+      "weekday": "Monday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.4,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 35,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 85,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-12",
+      "weekday": "Monday",
+      "partner_id": "partner_b",
+      "sleep_hours": 7.0,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 32,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 79,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.0,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 42,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 91,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 7.0,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 42,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 66,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-14",
+      "weekday": "Wednesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.1,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 48,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 79,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-14",
+      "weekday": "Wednesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 5.6,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 61,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 56,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-15",
+      "weekday": "Thursday",
+      "partner_id": "partner_a",
+      "sleep_hours": 6.8,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 46,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 83,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-15",
+      "weekday": "Thursday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.2,
+      "sleep_quality_1_to_5": 2,
+      "activity_minutes": 54,
+      "self_reported_energy_1_to_5": 2,
+      "estimated_energy_index_0_to_100": 41,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-16",
+      "weekday": "Friday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.2,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 42,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 80,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-16",
+      "weekday": "Friday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.2,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 41,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 58,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-17",
+      "weekday": "Saturday",
+      "partner_id": "partner_a",
+      "sleep_hours": 8.2,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 54,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 95,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-17",
+      "weekday": "Saturday",
+      "partner_id": "partner_b",
+      "sleep_hours": 8.0,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 51,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 88,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-18",
+      "weekday": "Sunday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.8,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 37,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 99,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-18",
+      "weekday": "Sunday",
+      "partner_id": "partner_b",
+      "sleep_hours": 8.0,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 34,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 82,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-19",
+      "weekday": "Monday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.3,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 43,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 80,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-19",
+      "weekday": "Monday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.9,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 40,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 78,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 6.9,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 37,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 78,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.9,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 37,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 73,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-21",
+      "weekday": "Wednesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.0,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 43,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 96,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-21",
+      "weekday": "Wednesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 5.5,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 56,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 56,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-22",
+      "weekday": "Thursday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.2,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 41,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 80,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-22",
+      "weekday": "Thursday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.1,
+      "sleep_quality_1_to_5": 2,
+      "activity_minutes": 49,
+      "self_reported_energy_1_to_5": 2,
+      "estimated_energy_index_0_to_100": 40,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-23",
+      "weekday": "Friday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.1,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 50,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 79,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-23",
+      "weekday": "Friday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.6,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 49,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 60,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-24",
+      "weekday": "Saturday",
+      "partner_id": "partner_a",
+      "sleep_hours": 8.1,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 49,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 100,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-24",
+      "weekday": "Saturday",
+      "partner_id": "partner_b",
+      "sleep_hours": 7.9,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 46,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 82,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-25",
+      "weekday": "Sunday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.7,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 32,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 94,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-25",
+      "weekday": "Sunday",
+      "partner_id": "partner_b",
+      "sleep_hours": 7.9,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 29,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 100,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-26",
+      "weekday": "Monday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.2,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 38,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 80,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-26",
+      "weekday": "Monday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.8,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 35,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 78,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-27",
+      "weekday": "Tuesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.3,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 45,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 85,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-27",
+      "weekday": "Tuesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.8,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 45,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 60,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-28",
+      "weekday": "Wednesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 6.9,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 51,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 78,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-28",
+      "weekday": "Wednesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 5.9,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 64,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 57,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-29",
+      "weekday": "Thursday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.1,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 36,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 92,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-29",
+      "weekday": "Thursday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.0,
+      "sleep_quality_1_to_5": 2,
+      "activity_minutes": 44,
+      "self_reported_energy_1_to_5": 2,
+      "estimated_energy_index_0_to_100": 40,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-30",
+      "weekday": "Friday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.0,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 45,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 84,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-30",
+      "weekday": "Friday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.5,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 44,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 72,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-31",
+      "weekday": "Saturday",
+      "partner_id": "partner_a",
+      "sleep_hours": 8.0,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 57,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 95,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-10-31",
+      "weekday": "Saturday",
+      "partner_id": "partner_b",
+      "sleep_hours": 7.8,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 54,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 82,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-01",
+      "weekday": "Sunday",
+      "partner_id": "partner_a",
+      "sleep_hours": 8.1,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 40,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 95,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-01",
+      "weekday": "Sunday",
+      "partner_id": "partner_b",
+      "sleep_hours": 7.8,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 37,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 82,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-02",
+      "weekday": "Monday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.1,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 33,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 97,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-02",
+      "weekday": "Monday",
+      "partner_id": "partner_b",
+      "sleep_hours": 7.2,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 30,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 84,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-03",
+      "weekday": "Tuesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.2,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 40,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 80,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-03",
+      "weekday": "Tuesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.7,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 40,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 60,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-04",
+      "weekday": "Wednesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 6.8,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 46,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 78,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-04",
+      "weekday": "Wednesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 5.8,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 59,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 57,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-05",
+      "weekday": "Thursday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.0,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 44,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 84,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-05",
+      "weekday": "Thursday",
+      "partner_id": "partner_b",
+      "sleep_hours": 5.9,
+      "sleep_quality_1_to_5": 2,
+      "activity_minutes": 52,
+      "self_reported_energy_1_to_5": 2,
+      "estimated_energy_index_0_to_100": 40,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-06",
+      "weekday": "Friday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.4,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 40,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 93,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-06",
+      "weekday": "Friday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.4,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 39,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 64,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-07",
+      "weekday": "Saturday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.9,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 52,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 95,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-07",
+      "weekday": "Saturday",
+      "partner_id": "partner_b",
+      "sleep_hours": 8.2,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 49,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 82,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-08",
+      "weekday": "Sunday",
+      "partner_id": "partner_a",
+      "sleep_hours": 8.0,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 35,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 100,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-08",
+      "weekday": "Sunday",
+      "partner_id": "partner_b",
+      "sleep_hours": 7.7,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 32,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 81,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-09",
+      "weekday": "Monday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.0,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 41,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 79,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-09",
+      "weekday": "Monday",
+      "partner_id": "partner_b",
+      "sleep_hours": 7.1,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 38,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 92,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-10",
+      "weekday": "Tuesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.1,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 48,
+      "self_reported_energy_1_to_5": 5,
+      "estimated_energy_index_0_to_100": 92,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-10",
+      "weekday": "Tuesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.6,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 48,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 65,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-11",
+      "weekday": "Wednesday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.2,
+      "sleep_quality_1_to_5": 5,
+      "activity_minutes": 41,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 84,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-11",
+      "weekday": "Wednesday",
+      "partner_id": "partner_b",
+      "sleep_hours": 5.7,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 54,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 56,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-12",
+      "weekday": "Thursday",
+      "partner_id": "partner_a",
+      "sleep_hours": 6.9,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 39,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 78,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-12",
+      "weekday": "Thursday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.3,
+      "sleep_quality_1_to_5": 2,
+      "activity_minutes": 47,
+      "self_reported_energy_1_to_5": 2,
+      "estimated_energy_index_0_to_100": 41,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-13",
+      "weekday": "Friday",
+      "partner_id": "partner_a",
+      "sleep_hours": 7.3,
+      "sleep_quality_1_to_5": 4,
+      "activity_minutes": 48,
+      "self_reported_energy_1_to_5": 4,
+      "estimated_energy_index_0_to_100": 80,
+      "is_simulated": true
+    },
+    {
+      "date": "2026-11-13",
+      "weekday": "Friday",
+      "partner_id": "partner_b",
+      "sleep_hours": 6.3,
+      "sleep_quality_1_to_5": 3,
+      "activity_minutes": 47,
+      "self_reported_energy_1_to_5": 3,
+      "estimated_energy_index_0_to_100": 59,
+      "is_simulated": true
+    }
+  ],
+  "validation_summary": {
+    "partner_a": {
+      "n_days": 60,
+      "overall_mean_energy_index": 87.3,
+      "weekday_means": {
+        "Monday": {
+          "n": 8,
+          "mean_energy_index": 84.4
+        },
+        "Tuesday": {
+          "n": 9,
+          "mean_energy_index": 85.1
+        },
+        "Wednesday": {
+          "n": 9,
+          "mean_energy_index": 83.1
+        },
+        "Thursday": {
+          "n": 9,
+          "mean_energy_index": 83.3
+        },
+        "Friday": {
+          "n": 9,
+          "mean_energy_index": 84.0
+        },
+        "Saturday": {
+          "n": 8,
+          "mean_energy_index": 96.1
+        },
+        "Sunday": {
+          "n": 8,
+          "mean_energy_index": 96.5
+        }
+      }
+    },
+    "partner_b": {
+      "n_days": 60,
+      "overall_mean_energy_index": 67.6,
+      "weekday_means": {
+        "Monday": {
+          "n": 8,
+          "mean_energy_index": 83.2
+        },
+        "Tuesday": {
+          "n": 9,
+          "mean_energy_index": 64.7
+        },
+        "Wednesday": {
+          "n": 9,
+          "mean_energy_index": 56.4
+        },
+        "Thursday": {
+          "n": 9,
+          "mean_energy_index": 40.3
+        },
+        "Friday": {
+          "n": 9,
+          "mean_energy_index": 63.1
+        },
+        "Saturday": {
+          "n": 8,
+          "mean_energy_index": 85.0
+        },
+        "Sunday": {
+          "n": 8,
+          "mean_energy_index": 86.1
+        }
+      }
+    }
+  }
+}

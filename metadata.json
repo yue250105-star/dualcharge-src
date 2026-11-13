@@ -1,0 +1,6 @@
+{
+  "name": "DualCharge — Couple Care Companion",
+  "description": "AI-powered couple care companion helping partners understand each other's energy patterns, anticipate changes, and share thoughtful care suggestions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
